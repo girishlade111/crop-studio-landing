@@ -1,30 +1,71 @@
-# Crop Studio Landing
+# Crop Studio — Landing Page
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+A dark, modern marketing landing page for **Crop Studio**, a screen-privacy tool that lets you crop out sensitive information on your screen during work calls — "Protect Your Privacy, Share What Matters."
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/gileb64375-5584s-projects/v0-crop-studio-landing)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/WYvkHHgxd5i)
+> **Built by Girish Lade** — more free tools at [ladestack.in](https://ladestack.in)
 
-## Overview
+## Features
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+- **Hero section** — bold headline with interactive grid background, ShineBorder CTA card, and demo video button
+- **Features section** — product capability highlights with icons and copy
+- **Showcase section** — visual product screenshots/previews
+- **Integrations section** — "seamlessly integrates with your..." stack logos/badges
+- **Partners section** — social proof / partner logos
+- **Announcement bar + Navbar** — sticky navigation with theme provider
+- **Dark-first design** — black background, white/10 borders, glow accents
+- **Responsive** — mobile-first Tailwind layouts
+
+## Tech Stack
+
+- **Next.js 15** (App Router, static export) + **React 19** + **TypeScript**
+- **Tailwind CSS** + **shadcn/ui** (Radix UI primitives)
+- **next-themes** for dark mode
+- **lucide-react** icons
+
+## Quick Start
+
+```bash
+# install dependencies
+npm install
+
+# run the dev server
+npm run dev
+# open http://localhost:3000
+
+# production build (static export to ./out)
+npm run build
+
+# serve the static build
+npx serve out
+```
+
+## Project Structure
+
+```
+app/                  # Next.js App Router (layout, page, globals.css)
+components/
+  header.tsx / navbar.tsx      # Navigation
+  announcement-bar.tsx
+  hero-section.tsx             # Interactive grid + ShineBorder hero
+  features-section.tsx
+  showcase-section.tsx
+  integration-section.tsx
+  partners-section.tsx
+  ui/                 # shadcn/ui primitives
+  theme-provider.tsx
+lib/utils.ts          # className helpers
+public/               # Static assets / screenshots
+styles/
+```
+
+## Environment Variables
+
+None — pure static landing page, no secrets or API keys.
 
 ## Deployment
 
-Your project is live at:
+Static site. Build with `npm run build` (configured with `output: 'export'`, images unoptimized) and deploy the `out/` directory to any static host — GitHub Pages, Cloudflare Pages, Netlify, or Vercel.
 
-**[https://vercel.com/gileb64375-5584s-projects/v0-crop-studio-landing](https://vercel.com/gileb64375-5584s-projects/v0-crop-studio-landing)**
+## License
 
-## Build your app
-
-Continue building your app on:
-
-**[https://v0.app/chat/projects/WYvkHHgxd5i](https://v0.app/chat/projects/WYvkHHgxd5i)**
-
-## How It Works
-
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+Free to use and modify.
